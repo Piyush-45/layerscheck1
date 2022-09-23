@@ -10,6 +10,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     position: relative;
+    /* width: 99.9%; */
 }
 
 a {
@@ -40,9 +41,19 @@ html {
     justify-items: center;
 
 }
+/* ====== hamburger menu ===== */
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+}
+.hamburger:focus{
+    outline: none;
 
-
-
+}
 /* ========= top section =========== */
 .top-line {
     font-size: 1.6rem;
@@ -56,9 +67,8 @@ nav {
     background-color: rgb(27, 27, 28);
     height: 10vh;
     width: 100%;
-    /* overflow: scroll; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
 }
@@ -69,9 +79,11 @@ nav .img {
 
 }
 
-.dropdown {
+nav .dropdown{
     display: flex;
-    gap: 6rem;
+    align-items: center;
+    gap: 8rem;
+
 }
 
 .dropdown-heading {
@@ -93,6 +105,37 @@ nav .img {
     margin: 1.7rem 1.2rem;
     cursor: pointer;
 }
+/* dropdown list */
+.skin-collection-list{
+    position: relative;
+  display: inline-block;
+ 
+    
+}
+.skins_list{
+    display: none;
+    position: absolute;
+    padding-inline:1rem ;
+
+    
+}
+.skins_list li{
+    color: white;
+    font-weight: 400;
+    background: #000000;
+    font-size: 1.5rem;
+    padding: 1.3rem;
+ 
+}
+.skins_list li:hover{
+    color: #c5c6d0;
+}
+.skin-collection-list:hover .skins_list{
+    display: block;
+    z-index: 9999;
+}
+
+
 
 /* ========= swiper styling ============ */
 
@@ -419,6 +462,10 @@ span {
     padding: 4rem;
     
 }
+/* ======= CYBERFORCE PAGE ============  */
+.cyberforce{
+    background-image: url(/images/cyberforce/cyberforce\ header\ banner.webp);
+}
 
 
 .wanderlust-footer-banner {
@@ -443,7 +490,8 @@ span {
 
 @media screen and (max-width: 1200px) {
     nav {
-        height: 7vh;
+        height: 8vh;
+        padding: 1rem;
     }
     nav .img {
         height: 5.5rem;
@@ -534,6 +582,18 @@ span {
 }
 
 @media screen and (max-width: 780px) {
+    
+    #nav-ul{
+        display: none;
+        width: 100%;
+    }
+    #nav-ul.show{
+        display: flex;
+
+    }
+    .hamburger{
+        display: block;
+    }
     nav {
         height: 10vh;
     }
@@ -661,6 +721,9 @@ span {
 
      /* =========== wanderlust banner ========== */
      .wanderlust-main{
+        background-position:top 100% right 5%;
+    }
+    .cyberforce{
         background-position:top 100% right 5%;
     }
 

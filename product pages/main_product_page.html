@@ -43,9 +43,17 @@
             <a href="/index.html"> <img src="/images/Logo_White.webp" alt="" class="img"></a>
 
             <div class="dropdown">
-                <div class="dropdown-heading">Select Device <img src="/images/icons8-chevron-24 (1).png" alt="">
-                </div>
-                <div class="dropdown-heading">Skin Collection <img src="/images/icons8-chevron-24 (1).png" alt="">
+                <!-- <div class="dropdown-heading">Select Device <img src="/images/icons8-chevron-24 (1).png" alt="">
+                </div> -->
+                <div class="dropdown-heading skin-collection-list">Skin Collection <img src="/images/icons8-chevron-24 (1).png" alt="">
+                
+                    <div class="skins_list">
+                       <a href="/collections/dark.html"> <li> Dark </li></a>
+                       <a href="/collections/wanderlust.html"> <li> wanderlust </li></a>
+                       <a href="#perky-pastels"><li>perky Pastels </li> </a>
+                       <a href="/collections/cyberforce.html"><li>cyberforce </li></a>
+                       <a href="#new-arrivals"><li>New Arrivals</li></a>
+                    </div>
                 </div>
                 <div class="dropdown-heading">FAQs </div>
                 <div class="dropdown-heading">Device not Found ?</div>
@@ -63,7 +71,7 @@
     <section class="product_page_container">
         <div class="product_right">
             <h1 class="product_h1">Samsung Galaxy Note 20 Ultra</h1>
-            <img src="/images/new arrivals/1.webp" alt="">
+            <img src="/images/new arrivals/1.webp" alt="" id="main_img">
         </div>
         <!-- left right thoda ulta ho gya hai -->
         <div class="left">
@@ -90,6 +98,17 @@
                     <span class="taxes">Inclusive Of all Taxes</span>
                   </div>
                     <a href="#" class="add_to_cart">Add to Cart</a>
+                </div>
+                <div class="small_images" id="secondary_images">
+                    <img src="/images/new arrivals/1.webp" alt="" class="small_image1" onclick="changeImage('/images/new arrivals/1.webp')">
+                    <img src="/images/new arrivals/2.webp" alt="" class="small_image2"  onclick="changeImage('/images/new arrivals/2.webp')">
+                    <img src="/images/new arrivals/3.webp" alt=""class="small_image3" onclick="changeImage('/images/new arrivals/3.webp')">
+                    <img src="/images/new arrivals/4.webp" alt=""class="small_image4" onclick="changeImage('/images/new arrivals/4.webp')">
+                    <img src="/images/new arrivals/5.webp" alt="" class="small_image1" onclick="changeImage('/images/new arrivals/5.webp')">
+                    <img src="/images/new arrivals/6.webp" alt="" class="small_image2"  onclick="changeImage('/images/new arrivals/6.webp')">
+                    <img src="/images/new arrivals/7.webp" alt=""class="small_image3" onclick="changeImage('/images/new arrivals/7.webp')">
+                    <img src="/images/new arrivals/8.webp" alt=""class="small_image4" onclick="changeImage('/images/new arrivals/8.webp')">
+                    
                 </div>
             </div>
         </div>
@@ -136,6 +155,7 @@
                     <p>Our skins come with a rich embossed texture that looks fantastic and feels fantastic too. Plus
                         they help you get a good grip on your phone.</p>
                 </div>
+               
             </div>
         </section>
     </section>
@@ -149,8 +169,14 @@
        </div>
     </section>
 
-
-
+    <script>
+        function changeImage(fileName){
+    let img = document.getElementById('main_img')
+    img.setAttribute("src", fileName)
+}
+    </script>
+   
+<script src="/index.js"></script>
 
 
 </body>
